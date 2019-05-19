@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
-import About from './About.js'
-import Home from './Home.js'
+import About from './features/about/'
+import Products from './features/products'
 import './App.css'
 
 class App extends Component {
@@ -14,8 +14,8 @@ class App extends Component {
         </header>
 
         <main>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/products/:productId" component={Home} />
+          <Route exact path="/" component={Products} />
+          <Route exact path="/products/:productId" component={Products} />
           <Route exact path="/about-us" component={About} />
         </main>
       </div>

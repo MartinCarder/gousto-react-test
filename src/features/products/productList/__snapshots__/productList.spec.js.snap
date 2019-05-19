@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList Renders and matches snapshot 1`] = `
+<div>
+  <Product
+    description="A description"
+    id="1"
+    key="1"
+    open={false}
+    title="A title"
+    toggleOpenProduct={[Function]}
+  />
+  <Product
+    description="A description"
+    id="2"
+    key="2"
+    open={false}
+    title="A title"
+    toggleOpenProduct={[Function]}
+  />
+</div>
+`;

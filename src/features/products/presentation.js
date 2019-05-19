@@ -1,6 +1,6 @@
 import React from "react";
 import CategoryList from "./categories";
-import ProductList from "./productList";
+import ProductList from "./productList/productList";
 import { SearchInput } from "./presentation.styled";
 
 export default ({ categories, products, search, setSearch }) => {
