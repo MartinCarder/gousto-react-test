@@ -1,8 +1,23 @@
 # Gousto coding test
 
-Hi there! We prepared a technical task so we can get to know you better. Below you will find scenarios and further details on what this task is about.
+Hi there! 
 
-If anything is unclear or you have any questions, feel free to get back to us. We want to make our technical task a pleasant experience so feel free to give us any feedback on this exercise.
+I've added enzyme, styledComponents reselect and redux sagas to the project. In terms of file structure it organised around feature and a redux folder using a ducks pattern.
+
+Made use of reselect and useMemo to memorise some of the filtering for performance optimisations
+
+The project is feature complete however I would make improvemnts with more time.
+
+Currently tested on Chrome only
+
+### Improvments:
+
+- [ ] finish writing ui tests
+- [ ] handle API errors in the UI
+- [ ] handle API loading in the UI
+- [ ] Clean up styles
+- [ ] Cross browser testing
+- [ ] Use immutable js
 
 ## How to use:
 
