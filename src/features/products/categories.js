@@ -1,18 +1,19 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const CategoryPresentation = ({ categories }) => (
+import { CategoryLink } from "./categories.styled";
+
+const CategoryList = ({ categories }) => (
   <div>
     {categories.map(category => (
-      <div key={category.id}>
-        <NavLink to={`/products/${category.id}`}>{category.title}</NavLink>
-      </div>
+      <CategoryLink key={category.id} to={`/products/${category.id}`}>
+        {category.title}
+      </CategoryLink>
     ))}
   </div>
 );
 
-CategoryPresentation.propTypes = {
+CategoryList.propTypes = {
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -21,4 +22,4 @@ CategoryPresentation.propTypes = {
   ).isRequired
 };
 
-export default CategoryPresentation;
+export default CategoryList;
