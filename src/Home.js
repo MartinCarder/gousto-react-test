@@ -3,12 +3,12 @@ import { push } from 'connected-react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import Product from "./features/products/categories/container";
+import Product from "./features/products";
 
 const Home = (props) => (
   <div>
     <h1 className="title">Welcome to Gousto React Coding Test</h1>
-    <Product />
+    <Product {...props}/>
     <p>
       
       <button onClick={() => props.changePage()}>
