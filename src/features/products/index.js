@@ -11,12 +11,12 @@ import {
 import { getCategoryProducts } from "redux/products/selectors";
 import ProductPresentation from "./presentation";
 
-export const Product = ({ getCategory, getProducts, categories }) => {
+export const Product = ({ getCategory, getProducts, categories, products }) => {
   useEffect(() => {
     getCategory();
     getProducts();
   }, []);
-  return <ProductPresentation categories={categories} />;
+  return <ProductPresentation categories={categories} products={products}/>;
 };
 
 export const mapStateToProps = (state, props) => ({
