@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
@@ -11,18 +11,50 @@ import {
 import { getCategoryProducts } from "redux/products/selectors";
 import ProductPresentation from "./presentation";
 
-export const Product = ({ getCategory, getProducts, categories, products }) => {
+export const Product = ({
+  getCategory,
+  getProducts,
+  categories,
+  products,
+  productId
+}) => {
   useEffect(() => {
     getCategory();
     getProducts();
   }, []);
-  return <ProductPresentation categories={categories} products={products}/>;
+
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    setSearch("");
+  }, [productId]);
+
+  const filterProducts = useMemo(
+    () =>
+      products.filter(product => {
+        return (
+          product.title.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+          product.description.toLowerCase().indexOf(search.toLowerCase()) !== -1
+        );
+      }),
+    [search, products]
+  );
+
+  return (
+    <ProductPresentation
+      categories={categories}
+      products={filterProducts}
+      search={search}
+      setSearch={setSearch}
+    />
+  );
 };
 
 export const mapStateToProps = (state, props) => ({
   categories: getCategories(state),
   categoriesStatus: getCategoriesStatus(state),
-  products: getCategoryProducts(state, props.match.params.productId)
+  products: getCategoryProducts(state, props.match.params.productId),
+  productId: props.match.params.productId
 });
 export const mapDispatchToProps = {
   getCategory: categoryFetch,
