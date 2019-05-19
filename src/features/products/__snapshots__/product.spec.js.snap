@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Renders and matches snapshoot 1`] = `
+<div
+  onClick={[Function]}
+>
+  <styled.div
+    open={false}
+  >
+    A title
+  </styled.div>
+</div>
+`;

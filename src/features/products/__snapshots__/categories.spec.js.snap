@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryList Renders and matches snapshot 1`] = `
+<div>
+  <Styled(NavLink)
+    key="1"
+    to="/products/1"
+  >
+    Title 1
+  </Styled(NavLink)>
+  <Styled(NavLink)
+    key="2"
+    to="/products/2"
+  >
+    Title 2
+  </Styled(NavLink)>
+</div>
+`;

@@ -11,16 +11,15 @@
     "precommit": "pretty-quick --staged"
   },
   "proxy": "https://api.gousto.co.uk/",
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
-  },
   "devDependencies": {
+    "add": "^2.0.6",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.0",
+    "enzyme-adapter-react-16": "^1.13.1",
+    "jest-enzyme": "^7.0.2",
     "prettier": "1.16.4",
-    "react-scripts": "^2.1.5"
+    "react-scripts": "^2.1.5",
+    "react-test-renderer": "^16.8.6",
+    "yarn": "^1.16.0"
   },
   "dependencies": {
     "connected-react-router": "^4.5.0",

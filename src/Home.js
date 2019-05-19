@@ -18,9 +18,6 @@ const Home = (props) => (
   </div>
 )
 
-const mapStateToProps = ({ }) => ({
-})
-
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
@@ -30,6 +27,6 @@ const mapDispatchToProps = dispatch =>
   )
 
 export default connect(
-  mapStateToProps,
+  undefined,
   mapDispatchToProps
 )(Home)
